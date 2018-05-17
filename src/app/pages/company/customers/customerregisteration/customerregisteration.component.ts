@@ -14,7 +14,7 @@ export class CustomerregisterationComponent implements OnInit{
         dropdownData:any; 
   constructor(private http: HttpClient) {
     this.customerregisterationModel=new CustomerregisterationModel();
-     	 	this.dropdownData=[[{"gender":"male","genderId":"1"},{"gender":"female","genderId":"2"}]];
+     	 	this.dropdownData=[{"data":[{"gender":"female","genderId":"1"},{"gender":"male","genderId":"2"}]}];
 	  }
         onBlur_firstname(eventData:any){} 
       input_firstname(eventData:any){} 

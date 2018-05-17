@@ -17,7 +17,7 @@
         <amexio-textarea-input [field-label]="'Address'" [(ngModel)]="customerregisterationModel.address" name="customerregisterationModel.address" [place-holder]="'Enter Address'" [allow-blank]="true" [font-size]="10" [has-label]="true" [columns]="'2'" (onBlur)="onBlur_address($event)"
             (input)="input_address($event)" (focus)="focus_address($event)">
         </amexio-textarea-input>
-        <amexio-dropdown [(ngModel)]="customerregisterationModel.gender" name="customerregisterationModel.gender" [field-label]="'Gender'" [data]="dropdownData" [display-field]="'gender'" [value-field]="'genderId'" [search]="'true'" (onBlur)="onBlur_gender($event)"
+        <amexio-dropdown [(ngModel)]="customerregisterationModel.gender" name="customerregisterationModel.gender" [data-reader]="'data'" [field-label]="'Gender'" [data]="dropdownData" [display-field]="'gender'" [value-field]="'genderId'" [search]="'true'" (onBlur)="onBlur_gender($event)"
             (input)="input_gender($event)" (onClick)="onClick_gender($event)" (onSingleSelect)="onSingleSelect_gender($event)" (onMultiSelect)="onMultiSelect_gender($event)">
         </amexio-dropdown>
         <amexio-password-input [field-label]="'Password'" [(ngModel)]="customerregisterationModel.password" name="customerregisterationModel.password" [place-holder]="'Enter Password'" [allow-blank]="true" [error-msg]="'Please Enter Password'" [min-length]="0"

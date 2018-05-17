@@ -11,10 +11,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CustomerregisterationComponent implements OnInit{
   customerregisterationModel:CustomerregisterationModel;
- 
+        dropdownData:any; 
   constructor(private http: HttpClient) {
     this.customerregisterationModel=new CustomerregisterationModel();
-       }
+     	 	this.dropdownData=[[{"gender":"male","genderId":"1"},{"gender":"female","genderId":"2"}]];
+	  }
         onBlur_firstname(eventData:any){} 
       input_firstname(eventData:any){} 
       focus_firstname(eventData:any){} 
@@ -30,16 +31,21 @@ export class CustomerregisterationComponent implements OnInit{
         onBlur_address(eventData:any){} 
       input_address(eventData:any){} 
       focus_address(eventData:any){} 
+        onBlur_gender(eventData:any){} 
+      input_gender(eventData:any){} 
+      onClick_gender(eventData:any){} 
+      onSingleSelect_gender(eventData:any){} 
+      onMultiSelect_gender(eventData:any){} 
         onBlur_password(eventData:any){} 
       input_password(eventData:any){} 
       focus_password(eventData:any){} 
         onClick_cancel(eventData:any){} 
         onClick_btn(eventData:any){} 
     ngOnInit(){
-  }
- 
+ 	  }
+ 	 	
 
    
 }
 export class CustomerregisterationModel{
-  firstname: string;  lastname: string;  phone: number;  dob: string;  address: string;  password: string; }
+  firstname: string;  lastname: string;  phone: number;  dob: string;  address: string;  gender: string;  password: string; }

@@ -15,7 +15,7 @@ export class CustomerregisterationComponent implements OnInit{
   constructor(private http: HttpClient) {
     this.customerregisterationModel=new CustomerregisterationModel();
        }
-          onBlur_firstname(eventData:any){} 
+        onBlur_firstname(eventData:any){} 
       input_firstname(eventData:any){} 
       focus_firstname(eventData:any){} 
         onBlur_lastname(eventData:any){} 
@@ -33,6 +33,8 @@ export class CustomerregisterationComponent implements OnInit{
         onBlur_password(eventData:any){} 
       input_password(eventData:any){} 
       focus_password(eventData:any){} 
+        onClick_cancel(eventData:any){} 
+        onClick_btn(eventData:any){} 
     ngOnInit(){
   }
  

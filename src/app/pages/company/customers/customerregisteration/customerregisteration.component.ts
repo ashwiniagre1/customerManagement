@@ -11,10 +11,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CustomerregisterationComponent implements OnInit{
   customerregisterationModel:CustomerregisterationModel;
-        dropdownData:any; 
+        radiogroupData:any; 
   constructor(private http: HttpClient) {
     this.customerregisterationModel=new CustomerregisterationModel();
-     	 	this.dropdownData={"data":[{"gender":"female","genderId":"1"},{"gender":"male","genderId":"2"}]};
+     	 	this.radiogroupData={"data":[{"genderId":"1","gender":"female"},{"genderId":"2","gender":"male"}]};
 	  }
         onBlur_firstname(eventData:any){} 
       input_firstname(eventData:any){} 
@@ -31,11 +31,7 @@ export class CustomerregisterationComponent implements OnInit{
         onBlur_address(eventData:any){} 
       input_address(eventData:any){} 
       focus_address(eventData:any){} 
-        onBlur_gender(eventData:any){} 
-      input_gender(eventData:any){} 
-      onClick_gender(eventData:any){} 
-      onSingleSelect_gender(eventData:any){} 
-      onMultiSelect_gender(eventData:any){} 
+        onSelection_gender(eventData:any){} 
         onBlur_password(eventData:any){} 
       input_password(eventData:any){} 
       focus_password(eventData:any){} 

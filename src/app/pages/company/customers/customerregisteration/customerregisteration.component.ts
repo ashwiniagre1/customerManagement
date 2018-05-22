@@ -1,6 +1,6 @@
 /**
  * Created by: MetaMagic
- * Date: 17/05/2018
+ * Date: 22/05/2018
  * Organization: MetaMagic	
  */
 import {Component, OnInit} from '@angular/core';
@@ -14,7 +14,7 @@ export class CustomerregisterationComponent implements OnInit{
         dropdownData:any; 
   constructor(private http: HttpClient) {
     this.customerregisterationModel=new CustomerregisterationModel();
-     	 	this.dropdownData=[{"data":[{"gender":"female","genderId":"1"},{"gender":"male","genderId":"2"}]}];
+     	 	this.dropdownData={"data":[{"gender":"female","genderId":"1"},{"gender":"male","genderId":"2"}]};
 	  }
         onBlur_firstname(eventData:any){} 
       input_firstname(eventData:any){} 

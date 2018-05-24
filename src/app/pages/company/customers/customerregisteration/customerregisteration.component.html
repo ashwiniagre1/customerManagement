@@ -1,35 +1,12 @@
-<amexio-card [footer]="true" [header]="true" [show]="true" [height]="400" [header-align]="'left'" [footer-align]="'right'">
-    <amexio-header>
-        Customer Registration
-    </amexio-header>
-    <amexio-body>
-        <amexio-text-input [field-label]="'First Name'" [(ngModel)]="customerregisterationModel.firstname" name="customerregisterationModel.firstname" [place-holder]="'Enter First Name'" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10"
-            [has-label]="true" (onBlur)="onBlur_firstname($event)" (input)="input_firstname($event)" (focus)="focus_firstname($event)">
-        </amexio-text-input>
-        <amexio-text-input [field-label]="'Last Name'" [(ngModel)]="customerregisterationModel.lastname" name="customerregisterationModel.lastname" [place-holder]="'Enter Last Name'" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true"
-            (onBlur)="onBlur_lastname($event)" (input)="input_lastname($event)" (focus)="focus_lastname($event)">
-        </amexio-text-input>
-        <amexio-number-input [field-label]="'Phone Number'" [(ngModel)]="customerregisterationModel.phone" name="customerregisterationModel.phone" [place-holder]="'Enter Phone Number'" [allow-blank]="true" [error-msg]="'Please Enter Phone Number'" [font-size]="10"
-            [has-label]="true" [min-value]="0" [max-value]="20" (onBlur)="onBlur_phone($event)" (input)="input_phone($event)" (focus)="focus_phone($event)">
-        </amexio-number-input>
-        <amexio-date-time-picker [field-label]="'Date Of Birth'" [date-picker]="true" [(ngModel)]="customerregisterationModel.dob" name="customerregisterationModel.dob" (onBlur)="onBlur_dob($event)" (input)="input_dob($event)" (focus)="focus_dob($event)">
-        </amexio-date-time-picker>
-        <amexio-textarea-input [field-label]="'Address'" [(ngModel)]="customerregisterationModel.address" name="customerregisterationModel.address" [place-holder]="'Enter Address'" [allow-blank]="true" [font-size]="10" [has-label]="true" [columns]="'2'" (onBlur)="onBlur_address($event)"
-            (input)="input_address($event)" (focus)="focus_address($event)">
-        </amexio-textarea-input>
-        <amexio-radio-group [field-label]="'Gender'" name="customerregisterationModel.gender" [data-reader]="'data'" [display-field]="'gender'" [value-field]="'genderId'" [data]="radiogroupData" [horizontal]="true" (onSelection)="onSelection_gender($event)">
-        </amexio-radio-group>
-        <amexio-password-input [field-label]="'Password'" [(ngModel)]="customerregisterationModel.password" name="customerregisterationModel.password" [place-holder]="'Enter Password'" [allow-blank]="true" [error-msg]="'Please Enter Password'" [min-length]="0"
-            [max-length]="20" [font-size]="10" [has-label]="true" (onBlur)="onBlur_password($event)" (input)="input_password($event)" (focus)="focus_password($event)">
-        </amexio-password-input>
+<amexio-row>
+    <amexio-column size="12">
+    </amexio-column>
+</amexio-row>
 
-    </amexio-body>
-
-    <amexio-action>
-        <amexio-button [label]="'Cancel'" [type]="'default'" [tooltip]="'button'" [size]="'default'" [form-bind]="'cancel'" (onClick)="onClick_cancel($event)">
-        </amexio-button>
-        <amexio-button [label]="'Save'" [type]="'green'" [tooltip]="'button'" [size]="'default'" [form-bind]="'btn'" (onClick)="onClick_btn($event)">
-        </amexio-button>
-
-    </amexio-action>
-</amexio-card>
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-typeahead [(ngModel)]="customerregisterationModel.Company" name="customerregisterationModel.Company" [field-label]="'Company List'" [data-reader]="'data'" [display-field]="'companyName'" [value-field]="'companyId'" [key]="'companyName'" [trigger-char]="1"
+            [data]="typeaheadData" (onClick)="onClick_Company($event)">
+        </amexio-typeahead>
+    </amexio-column>
+</amexio-row>
